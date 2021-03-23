@@ -2,10 +2,10 @@
 
 class Banco
 {
-    private static $dbNome = 'id16366396_lasorella';
+    private static $dbNome = 'lasorella';
     private static $dbHost = 'localhost';
-    private static $dbUsuario = 'id16366396_killer';
-    private static $dbSenha = '147258369Rr@';
+    private static $dbUsuario = 'root';
+    private static $dbSenha = '';
     
     private static $cont = null;
     
