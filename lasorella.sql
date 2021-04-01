@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12-Mar-2021 às 22:00
+-- Tempo de geração: 01-Abr-2021 às 21:05
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.2
 
@@ -21,6 +21,78 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `lasorella`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `avaliacoes`
+--
+
+CREATE TABLE `avaliacoes` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(30) NOT NULL,
+  `estrelas` int(5) NOT NULL,
+  `comentario` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `avaliacoes`
+--
+
+INSERT INTO `avaliacoes` (`id`, `nome`, `estrelas`, `comentario`) VALUES
+(26, 'Joana Daiane', 5, 'Excelente Restaurante. Recomendo a Todos.'),
+(27, 'Emilly Rebeca', 3, 'O restaurante é bom, mas não excelente.'),
+(28, 'Lívia Agatha', 4, 'Os pratos são excelentes.'),
+(29, 'Pedro Henrique Enrico', 5, 'O prato, o atendimento, o preço, tudo é ótimo nesse restaurante.'),
+(30, 'Roberto Nicolas', 2, 'O atendimento foi um pouco demorado, porém, é um bom restaurante.'),
+(31, 'Caio Nelson', 4, 'Fiz a reserva pelo site, funcionou perfeitamente.');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cardapios`
+--
+
+CREATE TABLE `cardapios` (
+  `id` int(11) NOT NULL,
+  `prato` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `cardapios`
+--
+
+INSERT INTO `cardapios` (`id`, `prato`) VALUES
+(1, 'Salmao Grelhado c/ Calda de Maracuja'),
+(2, 'File Mignon ao Molho Gorgonzola'),
+(3, 'Truta grelhada c/ Molho de Alcaparras'),
+(4, 'Camarao a Provencal'),
+(5, 'Talharim ao Molho Alfredo'),
+(6, 'Camarao na Moranga'),
+(7, 'Costelinha c/ Molho Barbecue'),
+(8, 'Feijao Tropeiro c/ Torresmo'),
+(9, 'File Mignon com Batata Corada'),
+(10, 'Bobo de Camarao');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `especialidades`
+--
+
+CREATE TABLE `especialidades` (
+  `id` int(11) NOT NULL,
+  `especial` varchar(100) NOT NULL,
+  `descricao` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `especialidades`
+--
+
+INSERT INTO `especialidades` (`id`, `especial`, `descricao`) VALUES
+(1, 'Salmao Grelhado c/ Calda de Maracuja', 'Um delicioso salmao grelhado com uma calda de maracuja.'),
+(2, 'Costelinha c/ Molho Barbecue', 'Nossa costela que se desfaz, um sabor irresistivel, nossa maior especialidade.');
 
 -- --------------------------------------------------------
 
@@ -79,6 +151,24 @@ INSERT INTO `usuarios` (`id`, `nome`, `login`, `senha`) VALUES
 --
 
 --
+-- Índices para tabela `avaliacoes`
+--
+ALTER TABLE `avaliacoes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices para tabela `cardapios`
+--
+ALTER TABLE `cardapios`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices para tabela `especialidades`
+--
+ALTER TABLE `especialidades`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices para tabela `reservas`
 --
 ALTER TABLE `reservas`
@@ -95,10 +185,16 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de tabela `avaliacoes`
+--
+ALTER TABLE `avaliacoes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
 -- AUTO_INCREMENT de tabela `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
