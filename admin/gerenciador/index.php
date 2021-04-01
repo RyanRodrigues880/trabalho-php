@@ -138,7 +138,7 @@ $logado = $_SESSION['login'];
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-    <title>Gerenciador de Reservas</title>
+    <title>Painel Administrativo do La Sorella</title>
 </head>
 
 <body>
@@ -146,7 +146,10 @@ $logado = $_SESSION['login'];
           <div class="jumbotron">
             <div class="text-center">
                 <h2>Gerenciador de Reservas</h2>
-                <a href="logout.php">Sair do Gerenciador</a>
+				<a href="././cardapio">Gerenciador de Cardapios</a>
+				</br>
+				</br>
+                <a class="btn btn-danger" href="logout.php">Sair</a>
             </div>
           </div>
             </br>

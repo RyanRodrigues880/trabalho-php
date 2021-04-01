@@ -38,14 +38,14 @@
             <ul class="navbar-nav d-flex justify-content-between">
                 <div class="d-flex flex-lg-row flex-column">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Inicio</a>
+                        <a class="nav-link" href="index.php">Inicio</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="cardapio.html">Nosso Cardápio</a>
+                        <a class="nav-link" href="cardapio.php">Nosso Cardápio</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="reservar.html">Reservar Mesa</a>
-                    </li>			
+                    </li>					
                 </div>
             </ul>
             
@@ -56,136 +56,41 @@
         </div>
     </div>
 </nav>
-<div class="hero">
-  <div class="container">
-	<div class="row d-flex align-items-center">
-		<div class="col-lg-6 hero-left">
-		    <h1 class="display-4 mb-5">La Sorella é conhecido como o <br>"melhor da região".</h1>
-		    <div class="mb-2">
-		    	<a class="btn btn-primary btn-shadow btn-lg" href="cardapio.html" role="button">Nosso Cardápio</a>
-		    </div>
-		   
-		    <ul class="hero-info list-unstyled d-flex text-center mb-0">
-		    	<li class="border-right">
-		    		<span class="lnr lnr-rocket"></span>
-		    		<h5>
-		    			Atendimento Rápido
-		    		</h5>
-		    	</li>
-		    	<li class="border-right">
-		    		<span class="lnr lnr-leaf"></span>
-		    		<h5>
-		    			Melhores Comidas
-		    		</h5>
-		    	</li>
-		    </ul>
-
-	    </div>
-	    <div class="col-lg-6 hero-right">
-	    	<div class="owl-carousel owl-theme hero-carousel">
-			    <div class="item">
-			    	<img class="img-fluid" src="img/branco.jpg" alt="">
-			    </div>
-			</div>
-	    </div>
-	</div>
-  </div>
-</div>
-<section id="gtco-welcome" class="bg-white section-padding">
+<section id="gtco-menu" class="section-padding">
     <div class="container">
         <div class="section-content">
-            <div class="row">
-                <div class="col-sm-5 img-bg d-flex shadow align-items-center justify-content-center justify-content-md-end img-2" style="background-image: url(img/restaurante.jpg);">
-                    
-                </div>
-                <div class="col-sm-7 py-5 pl-md-0 pl-4">
-                    <div class="heading-section pl-lg-5 ml-md-5">
-                        <span class="subheading">
-                            Nosso Restaurante
-                        </span>
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="heading-section text-center">
                         <h2>
-                            Bem vindo ao La Sorella
+                            Nosso Cardápio
                         </h2>
-                    </div>
-                    <div class="pl-lg-5 ml-md-5">
-                        <p>La Sorella oferece uma variedade de tamanhos, tipos e sabores de comidas. A nossa comida é feita na hora com um sabor irresistível. Faça sua reserva imeditamente e venha conhecer nosso restaurante, estamos aguardando você. :)</p>
-                        </div>
-                    </div>
+                    </div>  
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End of Welcome Section -->		<!-- Special Dishes Section -->
-<section id="gtco-special-dishes" class="bg-grey section-padding">
-</br>
-    <div class="container">
-        <div class="section-content">
-            <div class="heading-section text-center">
-                <h2>
-                    Nossas Especialidades
-                </h2>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-5 col-md-6 align-self-center py-5">
-                    <h2 class="special-number">01.</h2>
-                    <div class="dishes-text">
-                        <h3><span>Salmão</span><br> Grelhado c/ Calda de Maracujá</h3>
-                        <p class="pt-3">Um delicioso salmão grelhado com uma calda de maracujá.</p>
-                    </div>
-                </div>
-                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                    <img src="img/prato1.jpg" alt="" class="img-fluid shadow w-100">
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
-                    <img src="img/bife.jpg" alt="" class="img-fluid shadow w-100">
-                </div>
-                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2 py-5">
-                    <h2 class="special-number">02.</h2>
-                    <div class="dishes-text">
-                        <h3><span>Costelinha</span><br> c/ Molho Barbecue</h3>
-                        <p class="pt-3">Nossa costela que se desfaz, um sabor irresistível, nossa maior especialidade.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="gtco-testimonial" class="overlay bg-fixed section-padding" style="background-image: url(img/testi-bg.jpg);">
-</br>
-    <div class="container">
-        <div class="section-content">
-            <div class="heading-section text-center">
-                <h2>
-                    Avaliações
-                </h2>
             </div>
             <div class="row">
-                <!-- Testimonial -->
-                <div class="testi-content testi-carousel owl-carousel">
-                    <div class="testi-item">
-                        <i class="testi-icon fa fa-3x fa-quote-left"></i>
-                        <p class="testi-text">Excelente Restaurante. Atendimento Rápido.</p>
-                        <p class="testi-author">Patrick Ferreira</p>
-                    </div>
-                    <div class="testi-item">
-                        <i class="testi-icon fa fa-3x fa-quote-left"></i>
-                        <p class="testi-text">Comida incrível, irei recomendar para todos meus amigos.</p>
-                        <p class="testi-author">Mary Jane</p>
-                    </div>
-                    <div class="testi-item">
-                        <i class="testi-icon fa fa-3x fa-quote-left"></i>
-                        <p class="testi-text">Comida incrível, sabor irresistível.</p>
-                        <p class="testi-author">Deadpool</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        include 'admin/gerenciador/banco.php';
+                        $pdo = Banco::conectar();
+                        $sql = 'SELECT * FROM cardapios';
 
+                        foreach($pdo->query($sql)as $row)
+                        {
+                            echo '<tr>';
+                            echo '<td>'. $row['prato'] . '</td>';
+                        }
+                        Banco::desconectar();
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+</section>
 <footer class="mastfoot pb-5 bg-white section-padding pb-0">
     <div class="inner container">
          <div class="row">
@@ -236,4 +141,3 @@
 	<!-- Main JS -->
 	<script src="js/app.min.js "></script>
 </body>
-</html>

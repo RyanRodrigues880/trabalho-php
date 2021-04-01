@@ -1,8 +1,11 @@
 <?php
-$servidor = 'localhost';
-$banco = 'lasorella';
-$usuario = 'root';
-$senha = '';
-$conexao = mysqli_connect($servidor,$usuario,$senha);
-mysqli_select_db($conexao, $banco);
-?>
+  define("__SERVER__", "localhost");
+  define("__USER__", "root");
+  define("__PASS__", "");
+  define("__DB__", "lasorella");
+  define("__PORT__", 3306);
+  function getConnection() {
+    $link = mysqli_connect(__SERVER__, __USER__, __PASS__, __DB__, __PORT__);
+    mysqli_set_charset($link, "utf8");
+    return $link;
+  }

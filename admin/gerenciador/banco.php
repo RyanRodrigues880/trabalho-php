@@ -35,5 +35,4 @@ class Banco
         self::$cont = null;
     }
 }
-
 ?>

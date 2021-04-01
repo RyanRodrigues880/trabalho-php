@@ -3,4 +3,4 @@ session_start();
 unset ($_SESSION['login']);
 unset ($_SESSION['senha']);
 ?>
-<script>location.href='../index.html';</script>
+<script>location.href='/admin';</script>
