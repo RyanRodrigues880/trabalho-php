@@ -40,6 +40,7 @@ $logado = $_SESSION['login'];
                 <a class="btn btn-danger" href="logout.php">Sair</a>
             </div>
           </div>
+            <a href="prato.php" class="btn btn-success">Adicionar um Prato</a>
             </br>
             <div class="text-center">
             <h4>Nome do Prato</h4> 

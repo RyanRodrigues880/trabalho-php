@@ -212,8 +212,8 @@
                             <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">Enviar</button>
                             </div>
                         </div>
-                    </form>
-<div style="overflow: auto; width: 640px">
+                    </form>                 
+<div class="table-responsive">
 <table class="table table-borderless">
 <thead>
 <tr>
@@ -228,17 +228,17 @@ $sql = 'SELECT * FROM avaliacoes ORDER BY id DESC';
 foreach($pdo->query($sql)as $row)
 {
 echo '<tr>';
-echo '<div style="overflow:auto;">';
 echo '<td>'. $row['nome'] . '</td>';
 echo '<td>'. $row['comentario'] . '</td>';
 echo '<td>'. $row['estrelas'] . '</td>';
-echo '</div>';
+echo '<td width=250>';
 echo '</td>';
 echo '</tr>';
 }
 ?>
 </tbody>
 </table>
+</div>
 </div>
 </section>
 <footer class="mastfoot pb-5 bg-white section-padding pb-0">
