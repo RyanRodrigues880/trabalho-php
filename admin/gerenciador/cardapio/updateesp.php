@@ -1,9 +1,7 @@
 <?php
-
 ini_set('display_errors', 0 );
 error_reporting(0);
 session_start();
-
 if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
 {
 unset($_SESSION['login']);
@@ -20,22 +18,25 @@ header("Location: index.php");
 }
 if (!empty($_POST)) {
 $especialErro = null;
+$descricaoErro = null;
 $especial = $_POST['nome'];
-
+$descricao = $_POST['descricao'];
 //Validação
-
 $validacao = true;
 if (empty($especial)) {
 $especialErro = 'Por favor digite o nome do prato.';
 $validacao = false;
 }
-
+if (empty($descricao)) {
+$descricaoErro = 'Por favor digite a descrição do prato.';
+$validacao = false;
+}
 if ($validacao) {
 $pdo = Banco::conectar();
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$sql = "UPDATE especialidades SET especial = ? WHERE id = ?";
+$sql = "UPDATE especialidades SET especial = ?, descricao = ? WHERE id = ?";
 $q = $pdo->prepare($sql);
-$q->execute(array($especial, $id));
+$q->execute(array($especial, $descricao, $id));
 Banco::desconectar();
 header("Location: index.php");
 }
@@ -47,10 +48,10 @@ $q = $pdo->prepare($sql);
 $q->execute(array($id));
 $data = $q->fetch(PDO::FETCH_ASSOC);
 $especial = $data['especial'];
+$descricao = $data['descricao'];
 Banco::desconectar();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -66,79 +67,55 @@ Banco::desconectar();
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="css/style.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-<title>Atualizar a Reserva</title>
+<title>Atualizar a Especialidade</title>
 </head>
 <body>
 <div class="container">
 <div class="span10 offset1">
 <div class="card">
 <div class="card-header">
-<h3 class="well"> Atualizar a Reserva - ID: <?php echo $id ?></h3>
+<h3 class="well"> Atualizar a Especialidade - ID: <?php echo $id ?></h3>
 </div>
-
             <div class="card-body">
-
                 <form class="form-horizontal" action="updateesp.php?id=<?php echo $id ?>" method="post">
-
-
-
                     <div class="control-group <?php echo !empty($especialErro) ? 'error' : ''; ?>">
-
-                        <label class="control-label">Nome do Prato</label>
-
+                        <label class="control-label">Nome da Especialidade</label>
                         <div class="controls">
-
-                            <input name="nome" class="form-control" size="50" type="text" placeholder="Nome do Prato"
-
+                            <input name="nome" class="form-control" size="50" type="text" placeholder="Nome da Especialidade"
                                    value="<?php echo !empty($especial) ? $especial : ''; ?>">
-
                             <?php if (!empty($especialErro)): ?>
-
                                 <span class="text-danger"><?php echo $especialErro; ?></span>
-
                             <?php endif; ?>
-
                         </div>
-
                     </div>
-
+					</br>
+                    <div class="control-group <?php echo !empty($descricaoErro) ? 'error' : ''; ?>">
+                        <label class="control-label">Descrição do Prato</label>
+                        <div class="controls">
+                            <input name="descricao" class="form-control" size="50" type="text" placeholder="Descrição do Prato"
+                                   value="<?php echo !empty($descricao) ? $descricao : ''; ?>">
+                            <?php if (!empty($descricaoErro)): ?>
+                                <span class="text-danger"><?php echo $descricaoErro; ?></span>
+                            <?php endif; ?>
+                        </div>
+                    </div>		
+					
                     <br/>
-
                     <div class="form-actions">
-
                         <button type="submit" class="btn btn-warning">Atualizar</button>
-
                         <a href="index.php" type="btn" class="btn btn-default">Voltar</a>
-
                     </div>
-
                 </form>
-
             </div>
-
         </div>
-
     </div>
-
 </div>
-
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-
         crossorigin="anonymous"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-
         crossorigin="anonymous"></script>
-
 <!-- Latest compiled and minified JavaScript -->
-
 <script src="assets/js/bootstrap.min.js"></script>
-
 </body>
-
-
-
 </html>
-
