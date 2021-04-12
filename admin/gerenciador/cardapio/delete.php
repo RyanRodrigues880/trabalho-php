@@ -39,14 +39,14 @@ header("Location: index.php");
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-        <title>Deletar Contato</title>
+        <title>Painel Administrativo do La Sorella</title>
     </head>
     <body>
         <div class="container">
             <div class="span10 offset1">
             </br>
                 <div class="row">
-                    <h3 class="well">Excluir a Reserva - ID: <?php echo $id;?></h3>
+                    <h3 class="well">Excluir o Prato - ID: <?php echo $id;?></h3>
                 </div>
                 <form class="form-horizontal" action="delete.php" method="post">
                     <input type="hidden" name="id" value="<?php echo $id;?>" />
